@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #05060a;
+  --color-bg-soft: #0b0d14;
+  --color-surface: #11141d;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f4f4f6;
+  --color-text-muted: #8b8fa3;
+  --color-accent: #7c5cff;
+  --color-accent-soft: #a78bfa;
+  --color-cyan: #5ce1ff;
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* hide scrollbar but keep scroll functional */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.section-heading {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #f4f4f6 0%, #a78bfa 50%, #5ce1ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  a,
+  button {
+    cursor: pointer;
+  }
+}
