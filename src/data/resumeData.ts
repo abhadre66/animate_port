@@ -174,8 +174,18 @@ export const resumeData = {
       name: "Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure",
       link: "https://www.linkedin.com/learning/certificates/810e281ecc40a023207b0fbd797b2bb3945ead5743edccc74009716a9a61db27?trk=share_certificate",
     },
-    { name: "Microsoft Certified: Azure Fundamentals (AZ-900)" },
-    { name: "HackerRank: SQL Problem Solving (2022)" },
+    {
+      name: "AWS Academy Graduate - Generative AI Foundations - Training Badge",
+      link: "https://www.credly.com/badges/c3c06015-285d-4f28-8131-fa6500bcfb74/linked_in_profile",
+    },
+    {
+      name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      link: "https://www.credly.com/badges/b66abf93-d8ae-481f-b76e-9653e2d4968d/public_url",
+    },
+    {
+      name: "HackerRank: SQL Problem Solving (2022)",
+      link: "https://www.hackerrank.com/certificates/7ba66fd99595",
+    },
     { name: "INGENIOUS 2021: National Virtual Hackathon Participant" },
   ],
 };
