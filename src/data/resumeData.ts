@@ -95,6 +95,21 @@ export const resumeData = {
       ],
     },
     {
+      title: "ResumeAI",
+      subtitle: "AI Resume Tailoring with Fabrication Checks",
+      description:
+        "Your resume, rewritten in the time it takes to read this sentence — ResumeAI tailors a resume to a specific job posting using Claude, then verifies every rewritten line traces back to the original resume before it ships.",
+      github: "https://github.com/abhadre66/resume-tailor",
+      website: "https://resume-tailor.vercel.app",
+      stack: ["Next.js", "Tailwind CSS", "Node.js", "Express", "Claude Sonnet/Haiku", "Supabase", "Puppeteer"],
+      bullets: [
+        "Built a two-stage Claude pipeline: Claude Haiku parses an uploaded resume once into structured data (summary, skills, experience, projects) so the model never has to re-guess a candidate's background on later requests.",
+        "Implemented a job description scraper that reads live postings from a URL (or accepts pasted text), then used Claude Sonnet to rewrite and reorder resume bullets to match the posting, grounded entirely in the candidate's parsed history.",
+        "Added a fabrication guardrail: every tailored resume is diffed against the original structured parse, and any number, skill, or claim that doesn't trace back to the source resume is flagged instead of shipped, rather than trusting the model's output outright.",
+        "Generated a tailored PDF via Puppeteer alongside an ATS match score breaking down what matched the posting and what's missing, with auth and storage on Supabase (Postgres, Google OAuth + magic link).",
+      ],
+    },
+    {
       title: "Amazon Review Sentiment Prediction",
       subtitle: "Sentiment Analysis at Scale",
       description:
