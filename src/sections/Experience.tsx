@@ -149,14 +149,27 @@ export default function Experience() {
             Certifications
           </h3>
           <div className="mt-5 flex flex-wrap gap-3">
-            {resumeData.certifications.map((cert) => (
-              <span
-                key={cert}
-                className="glass rounded-full px-4 py-2 text-sm text-white/70"
-              >
-                {cert}
-              </span>
-            ))}
+            {resumeData.certifications.map((cert) =>
+              cert.link ? (
+                <a
+                  key={cert.name}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-cursor="link"
+                  className="glass rounded-full px-4 py-2 text-sm text-white/70 transition-colors hover:text-[#5ce1ff]"
+                >
+                  {cert.name}
+                </a>
+              ) : (
+                <span
+                  key={cert.name}
+                  className="glass rounded-full px-4 py-2 text-sm text-white/70"
+                >
+                  {cert.name}
+                </span>
+              )
+            )}
           </div>
         </motion.div>
       </div>

@@ -36,21 +36,6 @@ export const resumeData = {
   ],
   projects: [
     {
-      title: "Neuronix Lab",
-      subtitle: "Self-Hosted ML Training Platform",
-      description:
-        "A fully self-hosted, Dockerized ML training platform where users submit training jobs from a Next.js dashboard and watch live loss/accuracy charts update epoch-by-epoch.",
-      github: "https://github.com/abhadre66/Neuronix-Lab",
-      website: "https://neuronix-lab.vercel.app",
-      stack: ["Next.js", "FastAPI", "Celery", "Redis", "PyTorch", "MLflow", "PostgreSQL", "Prometheus", "Grafana", "Docker"],
-      bullets: [
-        "Built a fully self-hosted, Dockerized ML training platform where users submit training jobs from a Next.js dashboard and watch live loss/accuracy charts update epoch-by-epoch.",
-        "Designed an asynchronous job queue with FastAPI, Celery, and Redis to distribute training jobs across multiple worker replicas running PyTorch.",
-        "Implemented training pipelines for image classifiers (MLP, CNN, ResNet-18, MobileNet, EfficientNet) on MNIST/CIFAR-10, text classifiers (BERT-Tiny, DistilBERT) on SST-2, and regression models on custom CSV datasets.",
-        "Integrated MLflow for experiment tracking and model artifact versioning, plus a Prometheus + Grafana stack for real-time training and infrastructure monitoring, all orchestrated via Docker Compose.",
-      ],
-    },
-    {
       title: "AI Interview Engine",
       subtitle: "Voice-First Candidate Screening Platform",
       description:
@@ -81,17 +66,18 @@ export const resumeData = {
       ],
     },
     {
-      title: "AuthentiText",
-      subtitle: "AI-Generated Text Detection Engine",
+      title: "Neuronix Lab",
+      subtitle: "Self-Hosted ML Training Platform",
       description:
-        "A dual-model ensemble that detects AI-generated text with 99.1% F1 and 99.96% AUROC.",
-      github: "https://github.com/abhadre66/AI-text-Detector",
-      website: "https://huggingface.co/spaces/Abhadre/AI-Text-detector",
-      stack: ["Python", "XGBoost", "DistilBERT", "HuggingFace", "GCP", "Docker"],
+        "A fully self-hosted, Dockerized ML training platform where users submit training jobs from a Next.js dashboard and watch live loss/accuracy charts update epoch-by-epoch.",
+      github: "https://github.com/abhadre66/Neuronix-Lab",
+      website: "https://neuronix-lab.vercel.app",
+      stack: ["Next.js", "FastAPI", "Celery", "Redis", "PyTorch", "MLflow", "PostgreSQL", "Prometheus", "Grafana", "Docker"],
       bullets: [
-        "Trained a weighted ensemble model combining XGBoost (21 hand-crafted linguistic features: perplexity, burstiness, lexical density) with a fine-tuned DistilBERT transformer, achieving 99.1% F1 and 99.96% AUROC on held-out test data.",
-        "Conducted systematic model comparison across four architectures (Logistic Regression, Random Forest, XGBoost, DistilBERT) using ROC curves, confusion matrices, and SHAP feature importance; integrated Captum token-level attribution heatmaps for explainable AI (XAI).",
-        "Trained on the merged HC3 corpus spanning Wikipedia, Reddit, medicine, and finance domains; deployed as a publicly accessible machine learning inference app on HuggingFace Spaces.",
+        "Built a fully self-hosted, Dockerized ML training platform where users submit training jobs from a Next.js dashboard and watch live loss/accuracy charts update epoch-by-epoch.",
+        "Designed an asynchronous job queue with FastAPI, Celery, and Redis to distribute training jobs across multiple worker replicas running PyTorch.",
+        "Implemented training pipelines for image classifiers (MLP, CNN, ResNet-18, MobileNet, EfficientNet) on MNIST/CIFAR-10, text classifiers (BERT-Tiny, DistilBERT) on SST-2, and regression models on custom CSV datasets.",
+        "Integrated MLflow for experiment tracking and model artifact versioning, plus a Prometheus + Grafana stack for real-time training and infrastructure monitoring, all orchestrated via Docker Compose.",
       ],
     },
     {
@@ -107,6 +93,20 @@ export const resumeData = {
         "Implemented a job description scraper that reads live postings from a URL (or accepts pasted text), then used Claude Sonnet to rewrite and reorder resume bullets to match the posting, grounded entirely in the candidate's parsed history.",
         "Added a fabrication guardrail: every tailored resume is diffed against the original structured parse, and any number, skill, or claim that doesn't trace back to the source resume is flagged instead of shipped, rather than trusting the model's output outright.",
         "Generated a tailored PDF via Puppeteer alongside an ATS match score breaking down what matched the posting and what's missing, with auth and storage on Supabase (Postgres, Google OAuth + magic link).",
+      ],
+    },
+    {
+      title: "AuthentiText",
+      subtitle: "AI-Generated Text Detection Engine",
+      description:
+        "A dual-model ensemble that detects AI-generated text with 99.1% F1 and 99.96% AUROC.",
+      github: "https://github.com/abhadre66/AI-text-Detector",
+      website: "https://huggingface.co/spaces/Abhadre/AI-Text-detector",
+      stack: ["Python", "XGBoost", "DistilBERT", "HuggingFace", "GCP", "Docker"],
+      bullets: [
+        "Trained a weighted ensemble model combining XGBoost (21 hand-crafted linguistic features: perplexity, burstiness, lexical density) with a fine-tuned DistilBERT transformer, achieving 99.1% F1 and 99.96% AUROC on held-out test data.",
+        "Conducted systematic model comparison across four architectures (Logistic Regression, Random Forest, XGBoost, DistilBERT) using ROC curves, confusion matrices, and SHAP feature importance; integrated Captum token-level attribution heatmaps for explainable AI (XAI).",
+        "Trained on the merged HC3 corpus spanning Wikipedia, Reddit, medicine, and finance domains; deployed as a publicly accessible machine learning inference app on HuggingFace Spaces.",
       ],
     },
     {
@@ -170,9 +170,13 @@ export const resumeData = {
     },
   ],
   certifications: [
-    "Microsoft Certified: Azure Fundamentals (AZ-900)",
-    "HackerRank: SQL Problem Solving (2022)",
-    "INGENIOUS 2021: National Virtual Hackathon Participant",
+    {
+      name: "Microsoft Azure AI Essentials: Workloads and Machine Learning on Azure",
+      link: "https://www.linkedin.com/learning/certificates/810e281ecc40a023207b0fbd797b2bb3945ead5743edccc74009716a9a61db27?trk=share_certificate",
+    },
+    { name: "Microsoft Certified: Azure Fundamentals (AZ-900)" },
+    { name: "HackerRank: SQL Problem Solving (2022)" },
+    { name: "INGENIOUS 2021: National Virtual Hackathon Participant" },
   ],
 };
 
