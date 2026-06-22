@@ -187,6 +187,10 @@ export const resumeData = {
       link: "https://www.hackerrank.com/certificates/7ba66fd99595",
     },
     { name: "INGENIOUS 2021: National Virtual Hackathon Participant" },
+    {
+      name: "Docker Foundations Professional Certificate",
+      link: "https://www.linkedin.com/learning/certificates/edd770df20a8da170f707a3cf86b58e761b67153e31e0b9645e04a63f5b0e2d3?trk=share_certificate",
+    },
   ],
 };
 
